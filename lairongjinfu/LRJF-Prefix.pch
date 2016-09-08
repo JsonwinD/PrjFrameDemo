@@ -1,0 +1,35 @@
+//
+//  LRJF-Prefix.pch
+//  lairongjinfu
+//
+//  Created by Jaqen on 16/9/2.
+//  Copyright © 2016年 lairong. All rights reserved.
+//
+
+#ifndef LRJF_Prefix_pch
+#define LRJF_Prefix_pch
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import "Macros.h"
+#import "HJViewControllerBasicWithTableView.h"
+#import "YYCategories.h"
+
+//颜色
+#import "ColorUtil.h"
+//字体工具类
+#import "FontUtil.h"
+//尺寸工具类
+#import "SizeUtil.h"
+////图片工具类
+//#import "ImageTools.h"
+////常量
+//#import "General.h"
+
+////广播管理
+//#import "ToolNotificationCenter.h"
+////缓存
+//#import "CacheUtil.h"
+#endif
+
+#endif /* LRJF_Prefix_pch */

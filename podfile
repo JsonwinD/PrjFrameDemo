@@ -1,0 +1,21 @@
+
+platform:ios,'7.0'
+target “lairongjinfu” do
+
+pod 'YYModel’
+pod 'YYText’
+pod ‘YYCache’
+pod 'YYCategories'
+pod ‘IQKeyboardManager’
+pod ‘AFNetworking’
+pod 'SDCycleScrollView'
+pod 'FDFullscreenPopGesture'
+pod 'DZNEmptyDataSet'
+pod 'PNChart'
+pod 'SCLAlertView-Objective-C'
+pod 'RDVTabBarController'
+pod 'MJRefresh'
+pod 'Bugly'
+pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+
+end
