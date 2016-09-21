@@ -128,7 +128,7 @@
         //加入你自定义的view
         loadingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WidthScreen, 143)];
         
-        imgView = [[UIImageView alloc] initWithFrame:CGRectMake((WidthScreen-150)/2, -143/2, 150, 143)];
+        imgView = [[UIImageView alloc] initWithFrame:CGRectMake((WidthScreen-200)/2, -143/2, 150, 143)];
         //imgView.contentMode = UIViewContentModeScaleAspectFit;
         imgView.animationImages = [NSArray arrayWithObjects:
                                    [UIImage imageNamed:@"loading-1"],

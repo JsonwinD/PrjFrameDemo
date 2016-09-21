@@ -42,24 +42,25 @@
 }
 
 - (void)initView{
-    _rootScrollView = [[HJScrollView alloc] initWithFrame:self.view.frame andDelegate:self];
-    
-    [self.view addSubview:_rootScrollView];
-    
-    UIImageView *imageView = [[UIImageView alloc] init];
-    
-    
-    
     /**
      *  广告轮播图
      */
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, WidthScreen, WidthScreen/2.2) delegate:self placeholderImage:[UIImage imageNamed:@"news_image_default"]];
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, -20, WidthScreen, WidthScreen/2.2) delegate:self placeholderImage:[UIImage imageNamed:@"news_image_default"]];
     cycleScrollView.imageURLStringsGroup = @[@"http://f.hiphotos.baidu.com/zhidao/pic/item/f636afc379310a553e7a868db74543a982261068.jpg",@"http://f.hiphotos.baidu.com/zhidao/pic/item/f636afc379310a553e7a868db74543a982261068.jpg"];
     //轮播图点击事件
     cycleScrollView.clickItemOperationBlock = ^(NSInteger currentIndex){
         NSLog(@"%ld",(long)currentIndex);
     };
-    [_rootScrollView addSubview:cycleScrollView];
+    [self.view addSubview:cycleScrollView];
+    
+    /**
+     *  带刷新滚动视图
+     */
+    _rootScrollView = [[HJScrollView alloc] initWithFrame:CGRectMake(0, cycleScrollView.bottom, WidthScreen, HeightScreen-cycleScrollView.bottom-HeightBottomToolBar) andDelegate:self];
+    
+    [self.view addSubview:_rootScrollView];
+    
+    
 }
 
 -(void)headerRereshing{

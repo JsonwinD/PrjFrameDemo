@@ -9,14 +9,12 @@
 /* Begin PBXBuildFile section */
 		88554385396C7BD47C8C7F04 /* libPods-lairongjinfu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B32B655C7CEA6E83A06D382E /* libPods-lairongjinfu.a */; };
 		9B360DF91D7E4E7C00E9CA3C /* SizeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B360DF81D7E4E7C00E9CA3C /* SizeUtil.m */; };
-		9B360DFB1D7E653E00E9CA3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B360DFA1D7E653E00E9CA3C /* Images.xcassets */; };
 		9B360E041D7E971C00E9CA3C /* NetWorkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B360DFF1D7E971C00E9CA3C /* NetWorkClient.m */; };
 		9B360E0F1D7E984B00E9CA3C /* ConverUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B360E081D7E984B00E9CA3C /* ConverUtil.m */; };
 		9B360E101D7E984B00E9CA3C /* NSString+encryptDES.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B360E0A1D7E984B00E9CA3C /* NSString+encryptDES.m */; };
 		9B360E111D7E984B00E9CA3C /* NSString+Shove.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B360E0C1D7E984B00E9CA3C /* NSString+Shove.m */; };
 		9B360E121D7E984B00E9CA3C /* ShoveGeneralRestGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B360E0E1D7E984B00E9CA3C /* ShoveGeneralRestGateway.m */; };
 		9B360E151D7EA2A300E9CA3C /* HJViewControllerBasicWithNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B360E141D7EA2A300E9CA3C /* HJViewControllerBasicWithNetwork.m */; };
-		9B360E181D7EB0FA00E9CA3C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B360E171D7EB0FA00E9CA3C /* TestViewController.m */; };
 		9B7BE53F1D7FEB2E0016A5BD /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7BE53E1D7FEB2E0016A5BD /* IndexViewController.m */; };
 		9B88BFEE1D7D47270034CA38 /* HJScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B88BFED1D7D47270034CA38 /* HJScrollView.m */; };
 		9B88BFF11D7D51AD0034CA38 /* HJViewControllerBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B88BFF01D7D51AD0034CA38 /* HJViewControllerBasic.m */; };
@@ -27,9 +25,14 @@
 		9B89FF9C1D79698E00C6C708 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B89FF9B1D79698E00C6C708 /* UIKit.framework */; };
 		9B89FF9F1D796BD000C6C708 /* FontUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B89FF9E1D796BD000C6C708 /* FontUtil.m */; };
 		9B89FFA21D796E2F00C6C708 /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B89FFA11D796E2F00C6C708 /* ImageUtil.m */; };
+		9BB534D71D8FBD7C00FDDB4C /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB534D61D8FBD7C00FDDB4C /* AppDelegate+AppService.m */; };
+		9BB534DA1D8FBDC400FDDB4C /* AppDelegate+AppLifeCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB534D91D8FBDC400FDDB4C /* AppDelegate+AppLifeCircle.m */; };
+		9BB534DD1D8FBDF000FDDB4C /* AppDelegate+RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB534DC1D8FBDF000FDDB4C /* AppDelegate+RootController.m */; };
+		9BB534E41D8FCD1E00FDDB4C /* FinancialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB534E31D8FCD1E00FDDB4C /* FinancialViewController.m */; };
+		9BB534E91D8FCDB500FDDB4C /* LoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB534E81D8FCDB500FDDB4C /* LoanViewController.m */; };
+		9BB534EC1D8FCDC200FDDB4C /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB534EB1D8FCDC200FDDB4C /* AccountViewController.m */; };
 		9BE1E7791D7943E2005E9387 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE1E7781D7943E2005E9387 /* main.m */; };
 		9BE1E77C1D7943E2005E9387 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE1E77B1D7943E2005E9387 /* AppDelegate.m */; };
-		9BE1E77F1D7943E2005E9387 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE1E77E1D7943E2005E9387 /* ViewController.m */; };
 		9BE1E7821D7943E2005E9387 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE1E7801D7943E2005E9387 /* Main.storyboard */; };
 		9BE1E7841D7943E2005E9387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BE1E7831D7943E2005E9387 /* Assets.xcassets */; };
 		9BE1E7871D7943E2005E9387 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE1E7851D7943E2005E9387 /* LaunchScreen.storyboard */; };
@@ -40,7 +43,6 @@
 		3FC16A8F71731C70E0FE6BB8 /* Pods-lairongjinfu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lairongjinfu.release.xcconfig"; path = "Pods/Target Support Files/Pods-lairongjinfu/Pods-lairongjinfu.release.xcconfig"; sourceTree = "<group>"; };
 		9B360DF71D7E4E7C00E9CA3C /* SizeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SizeUtil.h; sourceTree = "<group>"; };
 		9B360DF81D7E4E7C00E9CA3C /* SizeUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SizeUtil.m; sourceTree = "<group>"; };
-		9B360DFA1D7E653E00E9CA3C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9B360DFE1D7E971C00E9CA3C /* NetWorkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkClient.h; sourceTree = "<group>"; };
 		9B360DFF1D7E971C00E9CA3C /* NetWorkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkClient.m; sourceTree = "<group>"; };
 		9B360E001D7E971C00E9CA3C /* NetWorkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkConfig.h; sourceTree = "<group>"; };
@@ -54,8 +56,7 @@
 		9B360E0E1D7E984B00E9CA3C /* ShoveGeneralRestGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoveGeneralRestGateway.m; sourceTree = "<group>"; };
 		9B360E131D7EA2A300E9CA3C /* HJViewControllerBasicWithNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJViewControllerBasicWithNetwork.h; sourceTree = "<group>"; };
 		9B360E141D7EA2A300E9CA3C /* HJViewControllerBasicWithNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJViewControllerBasicWithNetwork.m; sourceTree = "<group>"; };
-		9B360E161D7EB0FA00E9CA3C /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		9B360E171D7EB0FA00E9CA3C /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		9B41684E1D90CB7600C0AD2D /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9B7BE53D1D7FEB2E0016A5BD /* IndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
 		9B7BE53E1D7FEB2E0016A5BD /* IndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexViewController.m; sourceTree = "<group>"; };
 		9B88BFEC1D7D47270034CA38 /* HJScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJScrollView.h; sourceTree = "<group>"; };
@@ -76,12 +77,22 @@
 		9B89FF9E1D796BD000C6C708 /* FontUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontUtil.m; sourceTree = "<group>"; };
 		9B89FFA01D796E2F00C6C708 /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtil.h; sourceTree = "<group>"; };
 		9B89FFA11D796E2F00C6C708 /* ImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtil.m; sourceTree = "<group>"; };
+		9BB534D51D8FBD7C00FDDB4C /* AppDelegate+AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AppService.h"; sourceTree = "<group>"; };
+		9BB534D61D8FBD7C00FDDB4C /* AppDelegate+AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AppService.m"; sourceTree = "<group>"; };
+		9BB534D81D8FBDC400FDDB4C /* AppDelegate+AppLifeCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AppLifeCircle.h"; sourceTree = "<group>"; };
+		9BB534D91D8FBDC400FDDB4C /* AppDelegate+AppLifeCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AppLifeCircle.m"; sourceTree = "<group>"; };
+		9BB534DB1D8FBDF000FDDB4C /* AppDelegate+RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+RootController.h"; sourceTree = "<group>"; };
+		9BB534DC1D8FBDF000FDDB4C /* AppDelegate+RootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+RootController.m"; sourceTree = "<group>"; };
+		9BB534E21D8FCD1E00FDDB4C /* FinancialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinancialViewController.h; sourceTree = "<group>"; };
+		9BB534E31D8FCD1E00FDDB4C /* FinancialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinancialViewController.m; sourceTree = "<group>"; };
+		9BB534E71D8FCDB500FDDB4C /* LoanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanViewController.h; sourceTree = "<group>"; };
+		9BB534E81D8FCDB500FDDB4C /* LoanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanViewController.m; sourceTree = "<group>"; };
+		9BB534EA1D8FCDC200FDDB4C /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		9BB534EB1D8FCDC200FDDB4C /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
 		9BE1E7741D7943E2005E9387 /* lairongjinfu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lairongjinfu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE1E7781D7943E2005E9387 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9BE1E77A1D7943E2005E9387 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9BE1E77B1D7943E2005E9387 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9BE1E77D1D7943E2005E9387 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9BE1E77E1D7943E2005E9387 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9BE1E7811D7943E2005E9387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9BE1E7831D7943E2005E9387 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BE1E7861D7943E2005E9387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -136,19 +147,68 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		9B89FFA31D79741300C6C708 /* Test */ = {
+		9BB534D41D8FBA0B00FDDB4C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9B89FFA41D79742600C6C708 /* Controller */,
+				9BE1E77A1D7943E2005E9387 /* AppDelegate.h */,
+				9BE1E77B1D7943E2005E9387 /* AppDelegate.m */,
+				9BB534D51D8FBD7C00FDDB4C /* AppDelegate+AppService.h */,
+				9BB534D61D8FBD7C00FDDB4C /* AppDelegate+AppService.m */,
+				9BB534D81D8FBDC400FDDB4C /* AppDelegate+AppLifeCircle.h */,
+				9BB534D91D8FBDC400FDDB4C /* AppDelegate+AppLifeCircle.m */,
+				9BB534DB1D8FBDF000FDDB4C /* AppDelegate+RootController.h */,
+				9BB534DC1D8FBDF000FDDB4C /* AppDelegate+RootController.m */,
 			);
-			name = Test;
+			name = Home;
 			sourceTree = "<group>";
 		};
-		9B89FFA41D79742600C6C708 /* Controller */ = {
+		9BB534DE1D8FCAC100FDDB4C /* Financial */ = {
 			isa = PBXGroup;
 			children = (
-				9B360E161D7EB0FA00E9CA3C /* TestViewController.h */,
-				9B360E171D7EB0FA00E9CA3C /* TestViewController.m */,
+				9BB534E11D8FCCC300FDDB4C /* Controller */,
+			);
+			name = Financial;
+			sourceTree = "<group>";
+		};
+		9BB534DF1D8FCB2400FDDB4C /* Loan */ = {
+			isa = PBXGroup;
+			children = (
+				9BB534E51D8FCD7C00FDDB4C /* Controller */,
+			);
+			name = Loan;
+			sourceTree = "<group>";
+		};
+		9BB534E01D8FCB3500FDDB4C /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				9BB534E61D8FCD8900FDDB4C /* Controller */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		9BB534E11D8FCCC300FDDB4C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9BB534E21D8FCD1E00FDDB4C /* FinancialViewController.h */,
+				9BB534E31D8FCD1E00FDDB4C /* FinancialViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9BB534E51D8FCD7C00FDDB4C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9BB534E71D8FCDB500FDDB4C /* LoanViewController.h */,
+				9BB534E81D8FCDB500FDDB4C /* LoanViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9BB534E61D8FCD8900FDDB4C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9BB534EA1D8FCDC200FDDB4C /* AccountViewController.h */,
+				9BB534EB1D8FCDC200FDDB4C /* AccountViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -176,7 +236,6 @@
 			children = (
 				9BE1E78E1D79461A005E9387 /* Sources */,
 				9BE1E79C1D794A81005E9387 /* Resources */,
-				9B360DFA1D7E653E00E9CA3C /* Images.xcassets */,
 				9BE1E7771D7943E2005E9387 /* Supporting Files */,
 			);
 			path = lairongjinfu;
@@ -185,6 +244,8 @@
 		9BE1E7771D7943E2005E9387 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9BE1E7801D7943E2005E9387 /* Main.storyboard */,
+				9BE1E7851D7943E2005E9387 /* LaunchScreen.storyboard */,
 				9BE1E7781D7943E2005E9387 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -193,17 +254,12 @@
 		9BE1E78E1D79461A005E9387 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				9BB534D41D8FBA0B00FDDB4C /* Home */,
 				9BE1E7971D79497C005E9387 /* ViewControllers */,
 				9BE1E7931D794937005E9387 /* Custom */,
 				9BE1E7951D794964005E9387 /* Models */,
 				9BE1E7961D79496E005E9387 /* Net */,
 				9BE1E7941D794958005E9387 /* External */,
-				9BE1E77A1D7943E2005E9387 /* AppDelegate.h */,
-				9BE1E77B1D7943E2005E9387 /* AppDelegate.m */,
-				9BE1E7801D7943E2005E9387 /* Main.storyboard */,
-				9BE1E7831D7943E2005E9387 /* Assets.xcassets */,
-				9BE1E7851D7943E2005E9387 /* LaunchScreen.storyboard */,
-				9BE1E7881D7943E2005E9387 /* Info.plist */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -237,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				9B89FF951D79573B00C6C708 /* LRJF-Prefix.pch */,
+				9B41684E1D90CB7600C0AD2D /* Config.h */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -293,6 +350,9 @@
 			isa = PBXGroup;
 			children = (
 				9BE1E7981D7949AD005E9387 /* Index */,
+				9BB534DE1D8FCAC100FDDB4C /* Financial */,
+				9BB534DF1D8FCB2400FDDB4C /* Loan */,
+				9BB534E01D8FCB3500FDDB4C /* Account */,
 				9BE1E7991D7949CF005E9387 /* More */,
 			);
 			name = ViewControllers;
@@ -310,7 +370,6 @@
 		9BE1E7991D7949CF005E9387 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				9B89FFA31D79741300C6C708 /* Test */,
 			);
 			name = More;
 			sourceTree = "<group>";
@@ -318,8 +377,6 @@
 		9BE1E79A1D7949DE005E9387 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9BE1E77D1D7943E2005E9387 /* ViewController.h */,
-				9BE1E77E1D7943E2005E9387 /* ViewController.m */,
 				9B7BE53D1D7FEB2E0016A5BD /* IndexViewController.h */,
 				9B7BE53E1D7FEB2E0016A5BD /* IndexViewController.m */,
 			);
@@ -337,6 +394,8 @@
 			isa = PBXGroup;
 			children = (
 				9BE1E79D1D794A8E005E9387 /* Document */,
+				9BE1E7831D7943E2005E9387 /* Assets.xcassets */,
+				9BE1E7881D7943E2005E9387 /* Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -396,7 +455,7 @@
 		9BE1E76C1D7943E2005E9387 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = lairong;
 				TargetAttributes = {
 					9BE1E7731D7943E2005E9387 = {
@@ -429,7 +488,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B89FF971D79614100C6C708 /* 项目结构文档.rtf in Resources */,
-				9B360DFB1D7E653E00E9CA3C /* Images.xcassets in Resources */,
 				9BE1E7871D7943E2005E9387 /* LaunchScreen.storyboard in Resources */,
 				9BE1E7841D7943E2005E9387 /* Assets.xcassets in Resources */,
 				9BE1E7821D7943E2005E9387 /* Main.storyboard in Resources */,
@@ -493,18 +551,22 @@
 			files = (
 				9B360E111D7E984B00E9CA3C /* NSString+Shove.m in Sources */,
 				9B360E151D7EA2A300E9CA3C /* HJViewControllerBasicWithNetwork.m in Sources */,
-				9BE1E77F1D7943E2005E9387 /* ViewController.m in Sources */,
 				9B88BFF71D7D57580034CA38 /* HJViewControllerBasicWithTableView.m in Sources */,
+				9BB534EC1D8FCDC200FDDB4C /* AccountViewController.m in Sources */,
+				9BB534DA1D8FBDC400FDDB4C /* AppDelegate+AppLifeCircle.m in Sources */,
 				9B89FFA21D796E2F00C6C708 /* ImageUtil.m in Sources */,
 				9BE1E77C1D7943E2005E9387 /* AppDelegate.m in Sources */,
-				9B360E181D7EB0FA00E9CA3C /* TestViewController.m in Sources */,
 				9B360E0F1D7E984B00E9CA3C /* ConverUtil.m in Sources */,
 				9B89FF9F1D796BD000C6C708 /* FontUtil.m in Sources */,
 				9B360E101D7E984B00E9CA3C /* NSString+encryptDES.m in Sources */,
 				9BE1E7791D7943E2005E9387 /* main.m in Sources */,
 				9B360DF91D7E4E7C00E9CA3C /* SizeUtil.m in Sources */,
+				9BB534D71D8FBD7C00FDDB4C /* AppDelegate+AppService.m in Sources */,
 				9B89FF9A1D79680700C6C708 /* ColorUtil.m in Sources */,
+				9BB534E41D8FCD1E00FDDB4C /* FinancialViewController.m in Sources */,
 				9B360E121D7E984B00E9CA3C /* ShoveGeneralRestGateway.m in Sources */,
+				9BB534DD1D8FBDF000FDDB4C /* AppDelegate+RootController.m in Sources */,
+				9BB534E91D8FCDB500FDDB4C /* LoanViewController.m in Sources */,
 				9B360E041D7E971C00E9CA3C /* NetWorkClient.m in Sources */,
 				9B88BFEE1D7D47270034CA38 /* HJScrollView.m in Sources */,
 				9B88BFFA1D7D58890034CA38 /* HJTableView.m in Sources */,
@@ -549,13 +611,16 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -593,13 +658,16 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -627,7 +695,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/lairongjinfu/LRJF-Prefix.pch";
 				INFOPLIST_FILE = lairongjinfu/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lairong.lairongjinfu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -644,7 +712,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/lairongjinfu/LRJF-Prefix.pch";
 				INFOPLIST_FILE = lairongjinfu/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lairong.lairongjinfu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
