@@ -33,7 +33,7 @@
             [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
             self.navigationController.navigationBar.hidden=NO;
             self.navigationController.navigationBar.translucent=NO;
-            [self.navigationController.navigationBar setBarTintColor:ColorWhite];
+            [self.navigationController.navigationBar setBarTintColor:ColorNavBG];
             [self.navigationController.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:ColorNavTitle, NSForegroundColorAttributeName,FontNavTitle, NSFontAttributeName, nil]];
             
             // 导航条返回按钮
@@ -46,7 +46,7 @@
             [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
             self.navigationController.navigationBar.hidden=NO;
             self.navigationController.navigationBar.translucent=NO;
-            [self.navigationController.navigationBar setBarTintColor:ColorWhite];
+            [self.navigationController.navigationBar setBarTintColor:ColorNavBG];
             [self.navigationController.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:ColorNavTitle, NSForegroundColorAttributeName,FontNavTitle, NSFontAttributeName, nil]];
         }
             break;

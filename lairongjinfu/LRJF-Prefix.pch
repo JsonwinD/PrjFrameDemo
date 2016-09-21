@@ -15,8 +15,6 @@
 #import "HJViewControllerBasicWithTableView.h"
 #import "YYCategories.h"
 
-//配置文件
-#import "Config.h"
 //颜色
 #import "ColorUtil.h"
 //字体工具类

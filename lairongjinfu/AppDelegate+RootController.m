@@ -13,6 +13,7 @@
 #import "FinancialViewController.h"
 #import "LoanViewController.h"
 #import "AccountViewController.h"
+#import "AppDefaultUtil.h"
 
 @interface AppDelegate ()<RDVTabBarControllerDelegate,UIScrollViewDelegate,UITabBarControllerDelegate>
 
@@ -21,58 +22,68 @@
 
 
 @implementation AppDelegate (RootController)
+
+- (void)setAppWindows
+{
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = ColorBG;
+    [self.window makeKeyAndVisible];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+}
+
 - (void)setRootViewController
 {
     //判断是否第一次启动
-    if ([kUserDefaults objectForKey:@"isFirstLaunch"])
-    {
-        //[self checkBlack];
-        [self setRoot];
-    }
-    else
+    if ([[AppDefaultUtil sharedInstance] isFirstLancher])
     {
         UIViewController *emptyView = [[ UIViewController alloc ]init ];
         self.window.rootViewController = emptyView;
         [self createGuideScrollView];
     }
+    else
+    {
+        [self goToMain];
+    }
 }
+
 
 - (void)setRoot
 {
-    UINavigationController * navc = [[UINavigationController alloc] initWithRootViewController:self.viewController];
-    navc.navigationBar.barTintColor = ColorRedMain;
+    UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
     
-    navc.navigationBar.shadowImage = [[UIImage alloc] init];
-    [navc.navigationBar setTranslucent:NO];
+    navController.navigationBar.shadowImage = [[UIImage alloc] init];
+    [navController.navigationBar setTranslucent:NO];
     
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:ColorNavTitle}];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
-    [navc.navigationBar setTitleTextAttributes:@{NSFontAttributeName:FontNavTitle,NSForegroundColorAttributeName:ColorNavTitle}];
-    navc.navigationBar.tintColor = ColorNavTitle;
-    self.window.rootViewController = navc;
+    [navController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:FontNavTitle,NSForegroundColorAttributeName:ColorNavTitle}];
+    
+    navController.navigationBar.barTintColor = ColorNavBG;
+    navController.navigationBar.tintColor = ColorNavTitle;
+    
+    self.window.rootViewController = navController;
 }
 
 
 
 
-#pragma mark - Windows
+#pragma mark RDVTabbarController delegate
 - (void)setTabbarController
 {
     
     
     IndexViewController *indexVC = [[IndexViewController alloc] init];
-    //    UINavigationController *schoolNav = [[UINavigationController alloc]initWithRootViewController:school];
     
     FinancialViewController *financialVC  = [[FinancialViewController alloc] init];
-    //    UINavigationController *chidNav = [[UINavigationController alloc]initWithRootViewController:child];
     
     LoanViewController *loanVC = [[LoanViewController alloc]init];
-    //    UINavigationController *eduNav = [[UINavigationController alloc]initWithRootViewController:edu];
     
     AccountViewController *accountVC = [[AccountViewController alloc]init];
-    //    UINavigationController *courseListNav = [[UINavigationController alloc]initWithRootViewController:courseList];
     
     RDVTabBarController *tabBarController = [[RDVTabBarController alloc] init];
     [tabBarController setViewControllers:@[indexVC,financialVC,loanVC,accountVC]];
@@ -98,15 +109,21 @@
     if ([viewController isKindOfClass:[AccountViewController class]])
     {
         tabBarController.navigationItem.title = @"帐户";
+        
     }
 }
 
 - (void)customizeTabBarForController:(RDVTabBarController *)tabBarController
 {
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WidthScreen, HeightLine)];
+    lineView.backgroundColor = ColorLine;
+    [[tabBarController tabBar] addSubview:lineView];
+
+    
     UIImage *selectedBGImage = [UIImage imageWithColor:ColorWhite];
     UIImage *unSelectedBGImage = [UIImage imageWithColor:ColorWhite];
     NSArray *tabBarItemImages = @[@"tab_home",@"tab_investment",@"tab_loan",@"tab_account"];
-    NSArray *selectedImages = @[@"tab_home",@"tab_investment",@"tab_loan",@"tab_account"];
+    NSArray *selectedImages = @[@"tab_home_press",@"tab_investment_press",@"tab_loan_press",@"tab_account_press"];
     
     NSInteger index = 0;
     [[tabBarController tabBar] setTranslucent:YES];
@@ -116,16 +133,16 @@
         
         UIImage *selectedImage = [UIImage imageNamed:[selectedImages objectAtIndex:index]];
         UIImage *unselectedImage = [UIImage imageNamed:[tabBarItemImages objectAtIndex:index]];
-        item.titlePositionAdjustment = UIOffsetMake(0, 5);
+        item.titlePositionAdjustment = UIOffsetMake(0, 3);
         [item setFinishedSelectedImage:selectedImage withFinishedUnselectedImage:unselectedImage];
-        
+
         NSDictionary *unseleAtrr = @{
-                                     NSFontAttributeName: [UIFont systemFontOfSize:11],
+                                     NSFontAttributeName: [UIFont systemFontOfSize:12],
                                      NSForegroundColorAttributeName: [UIColor grayColor],
                                      };
         NSDictionary *seleAtrr = @{
-                                   NSFontAttributeName: [UIFont systemFontOfSize:11],
-                                   NSForegroundColorAttributeName: ColorRedMain,
+                                   NSFontAttributeName: [UIFont systemFontOfSize:12],
+                                   NSForegroundColorAttributeName: ColorMain,
                                    };
         [item setUnselectedTitleAttributes:unseleAtrr];
         [item setSelectedTitleAttributes:seleAtrr];
@@ -133,16 +150,7 @@
         index++;
     }
 }
-- (void)setAppWindows
-{
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = ColorBGGray;
-    [self.window makeKeyAndVisible];
-    [[UIApplication sharedApplication]setStatusBarHidden:NO];
-    [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent];
-    
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
-}
+
 #pragma mark - 引导页
 - (void)createGuideScrollView
 {//引导页
@@ -156,42 +164,28 @@
     NSArray *arr = @[@"guide_page1",@"guide_page2",@"guide_page3",@"guide_page4"];
     for (int i = 0; i<arr.count; i++)
     {
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenWidth*i, 0, kScreenWidth, kScreenHeight)];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenWidth*i, 0, WidthScreen, HeightScreen)];
         imageView.image = [UIImage imageNamed:arr[i]];
         [scrollView addSubview:imageView];
         imageView.userInteractionEnabled = YES;
         if (i == arr.count - 1)
         {
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-            btn.frame = CGRectMake((kScreenWidth/2)-50, kScreenHeight-110, 100, 40);
-            btn.backgroundColor = ColorRedMain;
+            btn.frame = CGRectMake((WidthScreen/2)-50, HeightScreen-110, 100, 40);
+            btn.backgroundColor = ColorMain;
             [btn setTitle:@"开始体验" forState:UIControlStateNormal];
             [btn addTarget:self action:@selector(goToMain) forControlEvents:UIControlEventTouchUpInside];
             [imageView addSubview:btn];
             [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            btn.layer.borderWidth = 1;
-            btn.layer.borderColor = ColorRedMain.CGColor;
         }
     }
-    scrollView.contentSize = CGSizeMake(kScreenWidth*arr.count, kScreenHeight);
+    scrollView.contentSize = CGSizeMake(WidthScreen*arr.count, HeightScreen);
   
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    if (scrollView.contentOffset.x>kScreenWidth *4+30)
-    {
-        [self goToMain];
-    }
 }
 
 - (void)goToMain
 {
-    //NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    [kUserDefaults setObject:@"isFirstLaunch" forKey:@"isFirstLaunch"];
-    [kUserDefaults synchronize];
     [self setRoot];
-    // self.window.rootViewController = self.viewController;
 }
 
 

@@ -13,10 +13,14 @@
 
 #define ColorWhite  [ColorUtil colorWithHexString:@"#ffffff"]
 //Nav标题字体颜色
-#define ColorNavTitle [ColorUtil colorWithHexString:@"#222222"]
+#define ColorNavBG [ColorUtil colorWithHexString:@"#fd5353"]
+//Nav标题字体颜色
+#define ColorNavTitle [ColorUtil colorWithHexString:@"#ffffff"]
 
+//主色调红色值
+#define ColorMain  [ColorUtil colorWithHexString:@"#fd5353"]
 //控制器主背景色
-#define ColorBGGray [ColorUtil colorWithHexString:@"#eff0f4"]
+#define ColorBG [ColorUtil colorWithHexString:@"#eff0f4"]
 
 //进度条背景色
 #define ColorProgressBackground [ColorUtil colorWithHexString:@"#dcdee4"]
@@ -59,8 +63,6 @@
 #define PinkColor  [ColorUtil colorWithHexString:@"#e34f4f"]
 //蓝色字体颜色值
 #define BluewordColor  [ColorUtil colorWithHexString:@"#436EEE"]
-//主色调红色值
-#define ColorRedMain  [ColorUtil colorWithHexString:@"#fd5353"]
 #define AlphaColorRedMainHeightLight  0.6
 //主色调红色值高亮
 #define ColorHeightRedMain  [ColorUtil colorWithHexString:@"#fd4a49"]

@@ -9,23 +9,6 @@
 #ifndef Macros_h
 #define Macros_h
 
-//-------------------空对象判断-------------------
-//字符串是否为空
-#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
-
-//数组是否为空
-#define kArrayIsEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
-
-//字典是否为空
-#define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
-
-//是否是空对象
-#define kObjectIsEmpty(_object) (_object == nil \|| [_object isKindOfClass:[NSNull class]] \|| ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \|| ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
-
-//-------------------获取屏幕宽度与高度-------------------
-#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
-#define kScreenHight ([UIScreen mainScreen].bounds.size.height)
-
 //-------------------系统实例-------------------
 #define kApplication        [UIApplication sharedApplication]
 #define kKeyWindow          [UIApplication sharedApplication].keyWindow
@@ -40,28 +23,9 @@
 //系统版本号
 #define kSystemVersion [[UIDevice currentDevice] systemVersion]
 
-//检查系统版本
-#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
-#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
-#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
-#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
-#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
-
 //获取当前语言
 #define kCurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
 
-//判断是否为iPhone
-#define kISiPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-
-//判断是否为iPad
-#define kISiPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-
-//判断是真机还是模拟器
-#if TARGET_OS_IPHONE//真机
-#endif
-#if TARGET_IPHONE_SIMULATOR
-//模拟器
-#endif
 
 //--------------------路径---------------------------
 //获取沙盒Document路径
@@ -87,7 +51,7 @@
 #define kImageNamed(_pointer) [UIImage imageNamed:[UIUtil imageName:_pointer］
 
 //----------------------弱引用/强引用----------------------
-#define kWeakSelf(type)   __weak typeof(type) weak##type = type;
+#define kWeakSelf(type) __weak typeof(type) weak##type = type;
 #define kStrongSelf(type) __strong typeof(type) type = weak##type;
 
 //----------------------角度_弧度----------------------
@@ -114,44 +78,11 @@
 
 
 //----------------------GCD----------------------
-#define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
-#define MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
+#define GCD_BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+#define GCD_MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
 
-//----------------------单例化一个类----------------------
-#define kSYNTHESIZE_SINGLETON_FOR_CLASS(classname) \
-\
-static classname *shared##classname = nil; \
-\
-+ (classname *)shared##classname \
-{ \
-@synchronized(self) \
-{ \
-if (shared##classname == nil) \
-{ \
-shared##classname = ［self alloc] init]; \
-} \
-} \
-\
-return shared##classname; \
-} \
-\
-+ (id)allocWithZone:(NSZone *)zone \
-{ \
-@synchronized(self) \
-{ \
-if (shared##classname == nil) \
-{ \
-shared##classname = [super allocWithZone:zone]; \
-return shared##classname; \
-} \
-} \
-\
-return nil; \
-} \
-\
-- (id)copyWithZone:(NSZone *)zone \
-{ \
-return self; \
-}
+
+//----------------------第三方服务key----------------------
+#define BuglyKey @"044a91d2b1"  //bugly
 
 #endif /* Macros_h */

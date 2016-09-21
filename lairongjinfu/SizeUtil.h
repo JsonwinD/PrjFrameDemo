@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #define HeightNavigationAndStateBar 64  //nav高度
 #define HeightStateBar 20 //状态栏高度
-#define HeightTabBar 49  //底部Tab高度
+#define HeightTabBar 44  //底部Tab高度
 #define HeightScreen [[UIScreen mainScreen] bounds].size.height
 #define WidthScreen [[UIScreen mainScreen] bounds].size.width
 //间距设置

@@ -18,9 +18,13 @@
 
 @implementation FinancialViewController
 
+-(void)initNav{
+    self.navgationState = NavgationStateHide;
+
+}
 
 -(void)viewWillAppear:(BOOL)animated{
-    self.navgationState = NavgationStateHide;
+    [self initNav];
     [super viewWillAppear:animated];
 }
 

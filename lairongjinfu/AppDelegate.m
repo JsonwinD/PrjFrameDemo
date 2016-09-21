@@ -31,6 +31,7 @@
     [self setTabbarController];
     [self setRootViewController];
     
+    //第三方服务
     [self registerBugly];
     
     return YES;
